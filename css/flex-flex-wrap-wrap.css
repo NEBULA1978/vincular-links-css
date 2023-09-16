@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+/* align-items-baseline.css */
+#contenedor {
+    /* height: 100px; */
+
+    background-color: khaki;
+    padding: 5px;
+    border: 2px solid black;
+
+    display: flex;
+    /* si queremo que sea vertical tenemos que decir */
+    /* disposicion por defecto en una fila */
+    flex-wrap: wrap;
+}
+
+.hijo {
+
+    background-color: #3498db;
+
+    /* line-height: 75px; */
+    border: 3px solid black;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px;
+
+    width: 150px;
+}

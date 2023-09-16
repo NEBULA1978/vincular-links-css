@@ -1,0 +1,29 @@
+
+/* align-items-baseline.css */
+#contenedor {
+    display: flex;
+    /* si queremo que sea vertical tenemos que decir */
+    /* disposicion por defecto en una fila */
+
+    /* las dos prpopiedades anteriores en una */
+    flex-flow: column wrap;
+
+
+    /* height: 100px; */
+
+    padding: 5px;
+    border: 2px solid black;
+    background-color: khaki;
+}
+
+.hijo {
+
+    background-color: #3498db;
+
+    font-size: 24px;
+    margin: 10px;
+    line-height: 75px;
+    text-align: center;
+    border: 3px solid black;
+    width: 150px;
+}
