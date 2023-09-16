@@ -1,17 +1,18 @@
 #!/bin/bash
 
-# Pregunta al usuario cuántos elementos desea agregar (empezando desde 1)
-read -p "¿Cuántos elementos deseas agregar (empezando desde 1)? " num_elements
+# Pregunta al usuario cuántos elementos desea agregar
+read -p "¿Cuántos elementos deseas agregar? " num_elements
 
-# Verifica que el número sea válido
-if [ $num_elements -ge 0 ]; then
+# Verifica que el número esté dentro del rango válido
+if [ $num_elements -gt 0 ]; then
   # Abre el archivo HTML para agregar elementos
   echo "<!-- Elementos agregados automáticamente -->" > temp.html
   for ((i = 1; i <= num_elements; i++)); do
-    echo "    <div class=\"grid-container\">" >> temp.html
-    echo "        <div class=\"item$i\">$i</div>" >> temp.html
-    echo "    </div>" >> temp.html
+    echo "    <div class=\"item$i\">$i</div>" >> temp.html
   done
+
+  # Cierra el archivo HTML temporal
+  echo "</div>" >> temp.html
 
   # Combina el archivo temporal con el archivo original y guarda la salida en "grid-container-hijos-modificado.html"
   cat grid-container-hijos.html temp.html > grid-container-hijos-modificado.html

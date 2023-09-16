@@ -1,0 +1,50 @@
+.grid-container {
+    display: grid;
+    background-color: cornsilk;
+    /* 3columnas */
+    /* grid-template-columns: auto auto auto; */
+    /* el alto de cajas le igo xuanto*/
+    /* grid-template-rows: 50px auto 100px; */
+    
+    grid-template-areas: 'header header header;'
+    'menu main aside'
+    'footer footer footer'
+
+}
+
+.grid-container div {
+    background-color: crimson;
+    text-align: center;
+    color: while;
+    border: 1px solid black;
+}
+
+.item1{
+    /* le digo la caja 1 hasta dos columnas derecha llega*/
+    /* grid-column: 1 / 3; */
+    /* me ocupados columnas */
+    grid-column: 1 / span 2;
+    /* empieza en la segunda columa a la derecha */
+    grid-column: 2 / span 2;
+    /* ocupa dos filas de abajo */
+    grid-row: 2 / span 2;
+    grid-row: 1 / span 3;
+    
+    /* empieza en la fila 1 en la
+    columna nº2 temina el la fila nº 5  */
+    /* describimos opciones anteriores en una expresion */
+    grid-area: 1 / 2 / 5 / 5;
+}
+
+.item2{
+    grid-area: header;
+}
+.item3{
+    grid-area: menu;
+}
+.item4{
+    grid-area: aside;
+}
+.item5{
+    grid-area: footer;
+}

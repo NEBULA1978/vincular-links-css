@@ -1,17 +1,38 @@
 .grid-container {
     display: grid;
     background-color: cornsilk;
-    /* 3columnas */
-    grid-template-columns: 30px auto 50px;
-    /* el alto de cajas le igo xuanto*/
-    grid-template-rows: 50px auto 100px;
-
-
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header header header"
+        "menu main aside"
+        "menu footer footer";
 }
 
 .grid-container div {
     background-color: crimson;
     text-align: center;
-    color: while;
+    color: white;
     border: 1px solid black;
+    padding: 10px;
+}
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: aside;
+}
+
+.item5 {
+    grid-area: footer;
 }
