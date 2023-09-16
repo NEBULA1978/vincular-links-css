@@ -9,6 +9,7 @@
 </head>
 <body>
     <section id="contenedor">
+        <!-- hago mas anchas las cajas con flex-grow -->
 <div class="hijo" style="order: 1; flex-grow: 1;">
     1
 </div>
@@ -23,16 +24,17 @@
     4
 </div>
 
-
-        <!-- <div class="hijo">
+        <!-- no se hace mas pequeña la caja mantiene su tamaño -->
+        <div style="flex-shrink: 0;" class="hijo">
             5
         </div>
+
         <div class="hijo">
             6
         </div>
         <div class="hijo">
             7
-        </div> -->
+        </div>
     </section>
 </body>
 </html>
