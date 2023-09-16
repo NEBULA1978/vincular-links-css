@@ -10,7 +10,7 @@ mapfile -t css_content < "$css_file"
 echo "Lista de importaciones en $css_file:"
 for i in "${!css_content[@]}"; do
     line="${css_content[$i]}"
-    if [[ $line == *"@import"* ]]; then
+    if [[ $line == *@import* ]]; then
         echo "$i: $line"
     fi
 done
@@ -33,7 +33,7 @@ fi
 # Descomentar la importación seleccionada
 selected_line="${css_content[$choice]}"
 if [[ "$selected_line" == "/*"*"*/" ]]; then
-    css_content[$choice]="${selected_line:2:-2}" # Eliminar los caracteres /* y */
+    css_content[$choice]="$(echo "$selected_line" | sed 's/\/\* //;s/ \*\/$//')" # Eliminar los caracteres /* y */
 fi
 
 # Guardar el contenido modificado en el archivo
