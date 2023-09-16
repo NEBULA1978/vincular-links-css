@@ -7,6 +7,7 @@ css_file="css/styles.css"
 mapfile -t css_content < "$css_file"
 
 while true; do
+    # Mostrar el menú de opciones
     echo "Menú:"
     echo "1. Comentar una importación"
     echo "2. Descomentar una importación"
@@ -14,6 +15,7 @@ while true; do
     echo "4. Descomentar todas las importaciones"
     echo "5. Salir"
 
+    # Leer la elección del usuario
     read -p "Seleccione una opción (1/2/3/4/5): " choice
 
     case $choice in
@@ -27,6 +29,7 @@ while true; do
                 fi
             done
 
+            # Leer la elección del usuario para comentar
             read -p "Ingrese el número de la importación que desea comentar (o 'q' para salir al menú principal): " comment_choice
 
             if [[ "$comment_choice" == "q" ]]; then
@@ -53,6 +56,7 @@ while true; do
                 fi
             done
 
+            # Leer la elección del usuario para descomentar
             read -p "Ingrese el número de la importación que desea descomentar (o 'q' para salir al menú principal): " uncomment_choice
 
             if [[ "$uncomment_choice" == "q" ]]; then
