@@ -5,9 +5,11 @@
     align-items: baseline;
     /* Alinea los elementos en la línea de base */
     height: 100vh;
+    border:1px solid black;
+    background-color:khaki;
 }
 
-.hijo {
+.box {
     width: 100px;
     height: 100px;
     background-color: #3498db;
@@ -17,4 +19,5 @@
     font-size: 24px;
     margin: 10px;
     border-radius: 10px;
+    text-align: center;
 }
