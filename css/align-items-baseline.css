@@ -1,0 +1,20 @@
+/* align-items-baseline.css */
+#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    /* Alinea los elementos en la línea de base */
+    height: 100vh;
+}
+
+.hijo {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    margin: 10px;
+    border-radius: 10px;
+}
