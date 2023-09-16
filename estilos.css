@@ -1,12 +1,13 @@
 .grid-container {
     display: grid;
     background-color: cornsilk;
-    grid-template-columns: auto auto auto;
+    /* 3columnas */
+    grid-template-columns: 30px auto 50px;
 }
 
 .grid-container div {
     background-color: crimson;
     text-align: center;
     color: while;
-    border:1p solid black;
+    border:1px solid black;
 }
