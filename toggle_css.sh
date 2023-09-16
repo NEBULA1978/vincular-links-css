@@ -15,29 +15,39 @@ for i in "${!css_content[@]}"; do
     fi
 done
 
-# Preguntar al usuario cuál importación desean comentar
-read -p "Ingrese el número de la importación que desea comentar (o 'q' para salir): " choice
+while true; do
+    read -p "Ingrese el número de la importación que desea comentar, 'a' para comentar todas o 'q' para salir: " choice
 
-# Verificar si el usuario desea salir
-if [[ "$choice" == "q" ]]; then
-    echo "Saliendo del script."
-    exit 0
-fi
-
-# Verificar si la opción ingresada es válida
-if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -ge "${#css_content[@]}" ]; then
-    echo "Opción no válida. Por favor, ingrese un número de importación válido."
-    exit 1
-fi
-
-# Comentar o descomentar la importación seleccionada
-if [[ "${css_content[$choice]}" == */*@import* ]]; then
-    css_content[$choice]="${css_content[$choice]/*\//@import}"
-else
-    css_content[$choice]="/* ${css_content[$choice]} */"
-fi
-
-# Guardar el contenido modificado en el archivo
-printf "%s\n" "${css_content[@]}" > "$css_file"
-
-echo "Se ha comentado o descomentado la importación seleccionada."
+    case $choice in
+        q)
+            echo "Saliendo del script."
+            exit 0
+            ;;
+        a)
+            # Comentar todas las importaciones una por una
+            for i in "${!css_content[@]}"; do
+                line="${css_content[$i]}"
+                if [[ $line == *@import* ]]; then
+                    css_content[$i]="/* ${css_content[$i]} */"
+                fi
+            done
+            printf "%s\n" "${css_content[@]}" > "$css_file"
+            echo "Se han comentado todas las importaciones."
+            ;;
+        *)
+            # Verificar si la opción ingresada es válida
+            if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -ge "${#css_content[@]}" ]; then
+                echo "Opción no válida. Por favor, ingrese un número de importación válido."
+            else
+                # Comentar o descomentar la importación seleccionada
+                if [[ "${css_content[$choice]}" == */*@import* ]]; then
+                    css_content[$choice]="${css_content[$choice]/*\//@import}"
+                else
+                    css_content[$choice]="/* ${css_content[$choice]} */"
+                fi
+                printf "%s\n" "${css_content[@]}" > "$css_file"
+                echo "Se ha comentado o descomentado la importación seleccionada."
+            fi
+            ;;
+    esac
+done
