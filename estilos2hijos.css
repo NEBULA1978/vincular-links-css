@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    background-color: cornsilk;
+    /* 3columnas */
+    grid-template-columns: 30px auto 50px;
+    /* el alto de cajas le igo xuanto*/
+    grid-template-rows: 50px auto 100px;
+
+
+}
+
+.grid-container div {
+    background-color: crimson;
+    text-align: center;
+    color: while;
+    border: 1px solid black;
+}
