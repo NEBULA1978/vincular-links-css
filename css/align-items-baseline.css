@@ -1,8 +1,8 @@
 /* align-items-baseline.css */
 #contenedor {
+    display: flex;
+    
     padding: 5px;
-   
-
     border:1px solid black;
     background-color:khaki;
 }
