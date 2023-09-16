@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.nav {
+    background-color: indigo;
+    height: 90px;
+    box-sizing: border-box;
+    /* Aquí se agregó un punto y coma para separar las propiedades */
+}
