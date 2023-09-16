@@ -3,6 +3,45 @@
     background-color: cornsilk;
     /* 3columnas */
     grid-template-columns: 30px auto 50px;
+    /* el alto de cajas le igo xuanto*/
+    grid-template-rows: 50px auto 100px;
+
+    /* centra contenido en centro */
+    /* justify-content: center; */
+    
+    /* separa columnas una de otra a lo ancho */
+    /* justify-content: space-evenly; */
+    /* Paracido a anterior pero separa un pco ams */
+    /* justify-content: space-around; */
+    
+    /* dos colunas exteriores al lateral y en medio centrada      */
+    /* justify-content: space-between; */
+    
+    /* alinea a izquierda */
+    /* justify-content: start; */
+    
+    
+    /* alinea a derecha */
+    /* justify-content: end; */
+
+/* Centramos cajas verticalmente */
+    height: 400px;
+    /* Establece la altura de las cajas a 400px */
+
+    /* Las siguientes propiedades son para la alineación vertical de contenido en un contenedor de cuadrícula */
+    align-content: center;
+    /* Centra el contenido verticalmente en el contenedor */
+    align-content: space-between;
+    /* Distribuye el contenido uniformemente con espacio entre las cajas */
+    align-content: space-around;
+    /* Distribuye el contenido uniformemente con espacio alrededor de las cajas */
+    align-content: space-evenly;
+    /* Distribuye el contenido uniformemente con espacio igual alrededor de las cajas */
+    align-content: start;
+    /* Alinea el contenido al principio del contenedor */
+    align-content: end;
+    /* Alinea el contenido al final del contenedor */
+
 }
 
 .grid-container div {
