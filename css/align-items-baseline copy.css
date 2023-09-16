@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 /* align-items-baseline.css */
 #contenedor {
     display: flex;
@@ -14,12 +16,19 @@
 
     /* por defecto a nowrap mantien el ancho para que quepa en una fila */
     /* Mantiene el ancho y si no cabe baja abajo */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* invierte */
-    flex-wrap: wrap-reverse;
-
+    /* flex-wrap: wrap-rekverse; */
+    /* equivale a las 2peopiedades anteriores */
+    /* flex-flow: column wrap-reverse; */
+    /* flex-flow: row wrap-reverse; */
+    /* flex-flow: row wrap; */
+    flex-flow: column wrap;
+    
+    height: 500px;
+    
     padding: 5px;
-    border:1px solid black;
+    border:2px solid black;
     background-color:khaki;
 }
 
@@ -29,7 +38,7 @@
    
     font-size: 24px;
     margin: 10px;
-    
+    line-height: 75px;
     text-align: center;
     border:3px solid black;
     width: 150px;
