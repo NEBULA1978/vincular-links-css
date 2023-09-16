@@ -14,6 +14,8 @@
     /* si queremo que sea vertical tenemos que decir */
     /* disposicion por defecto en una fila */
     flex-wrap: wrap;
+
+    height: 50px;
 }
 
 .hijo {

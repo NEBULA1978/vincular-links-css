@@ -1,4 +1,3 @@
-
 /* align-items-baseline.css */
 #contenedor {
     display: flex;
@@ -11,25 +10,43 @@
     justify-content: center;
     /* justify-content: end;
     justify-content: start; */
-    
+
     /* el espacio va a estar alrededor de la caja */
     /* justify-content: space-around; */
-    
+
     /* dejar un espacio entre de las cajas */
     /* justify-content: space-between; */
 
     /* para alinear elementos de forma vertical */
-    align-items:center;
+    align-items: center;
     /* align-items:flex-end; */
     /* align-items:flex-start; */
-    
+
     /* intentar ocupar todo el espacio dispomnible a lo alto de la caja*/
     /* align-items:stretch; */
-    
-    /* las demas cajas se alinean y esta caja a su bola */
-    align-items:baseline;
 
-    
+    /* las demas cajas se alinean y esta caja a su bola */
+    align-items: baseline;
+
+
+    align-items: flex-start;
+
+    /* alinea cajas hacia el centro del contnedor */
+    align-content: center;
+    /* hacia abajo las cajas */
+    /* align-content: flex-end; */
+    /* hacia arriba las cajas */
+    /* align-content: flex-start; */
+
+    /* Esta propiedad alinea los elementos dentro del contenedor verticalmente. */
+    align-content: stretch;
+
+    /* Esta propiedad distribuye uniformemente los elementos con espacio entre ellos, dejando espacio en blanco en los extremos. */
+    align-content: space-between;
+
+    /* Esta propiedad distribuye uniformemente los elementos con espacio alrededor de ellos, dejando espacio en blanco en ambos extremos y entre los elementos. */
+    align-content: space-around;
+
 
 
     /* height: 100px; */
